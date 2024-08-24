@@ -56,7 +56,7 @@ export function Filters() {
         <FiltersContainer onSubmit={handleSubmit} action="none">
             <Autocomplete
                 id="autocomplete-channels"
-                options={channels.map(channel => channel.name)}
+                options={channels.map(channel => channel.name).sort()}
                 style={{ width: 225 }}
                 defaultValue={state.currentChannel}
                 getOptionLabel={(channel: string) => channel}
